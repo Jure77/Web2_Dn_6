@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block naslov %}Topic detail{% endblock %}
+
+
+{% block vsebina %}
+<link rel="stylesheet" href="/assets/custom/css/style.css">
+
+
+<div id="topic">
+    <h3>{{ topic.title }}</h3>
+</div>
+<br>
+<div id="content">
+    <p>{{ topic.created.strftime("%d.%m.%y %H:%M") }}</p>
+    <p>{{ topic.author_email }}</p>
+    <p>{{ topic.content }}</p>
+</div>
+
+{% endblock %}
